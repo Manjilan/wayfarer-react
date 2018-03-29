@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-class Profile extends Component {
+class City extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile
+export default City
