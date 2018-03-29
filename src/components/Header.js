@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Header extends Component {
+    
+    modalShow = (e) => {
+    let modal = document.querySelector('.UserForm');
+    modal.style.display = 'flex';
+    e.preventDefault();
+}
 
   render() {
+    
     return (
       <header>
       <nav>
         <a href="/"><img src="./img/logo.png" className="brand-logo"/></a>
         <div>
-          <a href="">Sign Up</a>
-          <a href="">Log In</a>
+          <a onClick={this.modalShow} href="">Sign Up</a>
+          <a onClick={this.modalShow} href="">Log In</a>
           <a href="">Log Out</a>
         </div>
       </nav>
