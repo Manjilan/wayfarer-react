@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './Header.css';
 
 class Header extends Component {
-    
+
     modalShow = (e) => {
     let modal = document.querySelector('.UserForm');
     modal.style.display = 'flex';
@@ -10,11 +10,11 @@ class Header extends Component {
 }
 
   render() {
-    
+
     return (
       <header>
       <nav>
-        <a href="/"><img src="./img/logo.png" className="brand-logo"/></a>
+        <a href="/"><img src="./img/logo.png" alt ="logo" className="brand-logo"/></a>
         <div>
           <a onClick={this.modalShow} href="">Sign Up</a>
           <a onClick={this.modalShow} href="">Log In</a>
