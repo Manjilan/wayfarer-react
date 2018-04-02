@@ -11,9 +11,9 @@ class CreatePost extends Component {
       title:"",
       body:""
     }
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
-  onSubmit(event){
+  onFormSubmit(event){
     event.preventDefault();
     let formdata = {city: this.state.city, title: this.state.title, body: this.state.body };
     console.log(formdata);
@@ -47,7 +47,7 @@ class CreatePost extends Component {
     return (
       <div className="postForm">
         <div className="modalForm">
-          <form className="createPost" onClick={this.onSubmit}>
+          <form className="createPost"  onSubmit={this.onFormSubmit}>
             <h2>Create a New Post</h2>
             <select onChange={event => this.setState({city: event.target.value})}>
               {cityList}
