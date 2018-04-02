@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import './App.css'
+import { Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Header from './components/Header'
 import Signup from './components/Signup'
-import Routes from './config/routes';
-import Cities from './components/Cities';
+import Routes from './config/routes'
+import Cities from './components/Cities'
+import City from './components/City'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <div>
       <Header />
       <Routes />
+      <City />
       </div>
     );
   }

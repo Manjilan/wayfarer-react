@@ -4,16 +4,18 @@ import WayfarerModel from '../model/axiosCall'
 import axios from 'axios'
 
 class City extends Component {
-  constructor(){
-  super();
-  this.state={
-    cities:[]
-  }
-}
+//   constructor(props){
+//   super(props);
+//   this.state={
+//     selectedCity: this.props.cities._id
+//   }
+// }
+
 
   render() {
     return (
       <div>
+      
       </div>
     )
   }

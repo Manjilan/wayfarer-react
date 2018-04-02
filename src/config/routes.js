@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from '../components/Home';
 import Cities from '../components/Cities';
+import City from '../components/City';
 // import TodosContainer from '../containers/TodosContainer';
 
 class Routes extends Component {
@@ -10,7 +11,7 @@ class Routes extends Component {
       <div className='mainRoute'>
   <Switch>
     <Route exact path='/' component={ Home }/>
-    <Route path='/Cities' component={Cities} />
+    <Route path='/cities' component={Cities} />
   </Switch>
   </div>
 )
