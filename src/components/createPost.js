@@ -22,7 +22,7 @@ class CreatePost extends Component {
   createapost(formdata){
     console.log("axios works")
       axios
-     .post("http://localhost:3001/cities/5abe88ea0ab9900a385e6f67", formdata)
+     .post("http://localhost:4000/cities/5abe88ea0ab9900a385e6f67", formdata)
      .then((response) => {
        console.log(response);
      })
@@ -30,7 +30,7 @@ class CreatePost extends Component {
   }
   componentDidMount(){
     axios
-   .get("http://localhost:3001/cities")
+   .get("http://localhost:4000/cities")
    .then((response) => {
      console.log(response);
      this.setState({cityOptions: response.data.city})

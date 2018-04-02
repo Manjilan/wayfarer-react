@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from '../components/Home';
 import CitiesContainer from '../components/citiesContainer';
+import Post from '../components/Post';
 
 
 class Routes extends Component {
@@ -11,6 +12,7 @@ class Routes extends Component {
   <Switch>
     <Route exact path='/' component={ Home }/>
     <Route path='/Cities' component={CitiesContainer} />
+    <Route path='/Cities/:id/:post_id' component={Post} />
   </Switch>
   </div>
 )

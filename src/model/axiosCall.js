@@ -2,7 +2,7 @@ import axios from 'axios'
 
 class WayfarerModel {
   static all(){
-    let request = axios.get("http://localhost:3001/all")
+    let request = axios.get("http://localhost:4000/all")
     return request
   }
 //   static create(todo) {

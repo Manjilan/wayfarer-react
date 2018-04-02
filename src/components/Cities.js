@@ -12,7 +12,7 @@ class Cities extends Component {
 }
 componentDidMount () {
  axios
-   .get("http://localhost:3001/all")
+   .get("http://localhost:4000/all")
    .then((response) => {
      console.log(response.data.cities)
      this.setState({cities: response.data.cities})
