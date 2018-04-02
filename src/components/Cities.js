@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './cities.css';
 import axios from 'axios'
 import City from './City'
 
@@ -23,10 +23,10 @@ componentDidMount () {
   render() {
     let cityList= this.state.cities.map(( city, index) => {
       return(
-        <div key={index}>
-        <h3>{city.name}</h3>
-        <img src={city.image}/>
-        </div>
+          <div key={index} className="cities">
+            <h3>{city.name}</h3>
+            <img src={city.image} alt="city"/>
+          </div>
       )}
     )
     return (
