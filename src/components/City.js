@@ -14,7 +14,7 @@ class City extends Component {
   render() {
     let postList = this.state.citiesPost.map((post, index)=>{
       return(
-        <div key={index} className="postCard" onClick={this.props.getCity}>
+        <div key={index} className="postCard">
           <h3>{post.title}</h3>
           <p>{post.body}</p>
           <p>{post.user}</p>
@@ -22,6 +22,7 @@ class City extends Component {
         </div>
       )
     })
+    console.log(this.props.city)
     console.log(this.state.citiesPost)
     return (
       <div>

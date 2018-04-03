@@ -26,10 +26,10 @@ componentDidMount () {
    .catch(err => console.log(err))
 }
 
-  render(){
+  render() {
     let cityList= this.state.cities.map((city, index) => {
       return(
-          <div key={city._id} className="cities" onClick={(e) => console.log(city._id)} >
+          <div key={city._id} className="cities" onClick={(e) => this.props.cityId(city._id)} >
             <h3>{city.name}</h3>
             <img src={city.image} alt="city"/>
           </div>
