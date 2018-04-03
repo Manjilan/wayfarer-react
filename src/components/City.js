@@ -21,7 +21,6 @@ class City extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
       <div>
       <Link to="/cities/post">Post title test</Link>
       </div>
@@ -30,9 +29,6 @@ class City extends Component {
             <Route path="/cities/post" component={ Post } />
          </Switch>
       </div>
-=======
-      
->>>>>>> 708e8e3731cddc3aefb09de45f3575250c9afb27
       </div>
     )
   }

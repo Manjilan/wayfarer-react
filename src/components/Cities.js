@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import {
-    Route,
-    Link,
-    Switch
-} from 'react-router-dom'
-import '../App.css';
-=======
 import './cities.css';
->>>>>>> f71f833ee9e17c3feddf514cb4187a1c48e41970
 import axios from 'axios'
 import City from './City'
 
