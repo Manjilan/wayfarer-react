@@ -12,7 +12,7 @@ class Routes extends Component {
   <Switch>
     <Route exact path='/' component={ Home }/>
     <Route path='/Cities' component={CitiesContainer} />
-    <Route path='/Cities/:id/:post_id' component={Post} />
+
   </Switch>
   </div>
 )

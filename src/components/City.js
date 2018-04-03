@@ -21,11 +21,11 @@ class City extends Component {
     return (
       <div>
       <div>
-      <Link to="/post">Post title test</Link>
+      <Link to="/cities/post">Post title test</Link>
       </div>
       <div>
       <Switch>
-            <Route path="/post" component={ Post } />
+            <Route path="/cities/post" component={ Post } />
          </Switch>
       </div>
       </div>
