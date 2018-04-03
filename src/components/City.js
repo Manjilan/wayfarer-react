@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './cities.css';
 import WayfarerModel from '../model/axiosCall'
-import Post from './Post'
-import {
-    Route,
-    Link,
-    Switch
-} from 'react-router-dom'
-
+import axios from 'axios';
 
 class City extends Component {
-//   constructor(props){
-//   super(props);
-//   this.state={
-//     selectedCity: this.props.cities._id
-//   }
-// }
-
-
+  constructor(props){
+  super(props);
+  this.state={
+    id:this.props.city,
+    citiesPost:[]
+  }
+}
   render() {
+    let postList = this.state.citiesPost.map((post, index)=>{
+      return(
+        <div key={index} className="postCard" onClick={this.props.getCity}>
+          <h3>{post.title}</h3>
+          <p>{post.body}</p>
+          <p>{post.user}</p>
+          <button onClick={this.deletePost}>Delete</button>
+        </div>
+      )
+    })
+    console.log(this.state.citiesPost)
     return (
       <div>
-      <div>
-      <Link to="/cities/post">Post title test</Link>
-      </div>
-      <div>
-      <Switch>
-            <Route path="/cities/post" component={ Post } />
-         </Switch>
-      </div>
+      {postList}
       </div>
     )
   }

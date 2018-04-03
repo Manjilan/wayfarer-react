@@ -22,7 +22,7 @@ class CreatePost extends Component {
   createapost(formdata){
     console.log("axios works")
       axios
-     .post("http://localhost:4000/cities/5abe88ea0ab9900a385e6f67", formdata)
+     .post("https://shrouded-wildwood-58299.herokuapp.com/cities/5abe88ea0ab9900a385e6f67", formdata)
      .then((response) => {
        console.log(response);
      })
@@ -30,7 +30,7 @@ class CreatePost extends Component {
   }
   componentDidMount(){
     axios
-   .get("http://localhost:4000/cities")
+   .get("https://shrouded-wildwood-58299.herokuapp.com/cities")
    .then((response) => {
      console.log(response);
      this.setState({cityOptions: response.data.city})

@@ -1,7 +1,20 @@
 .cities{
   width: 80%;
-  background: white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-bottom: 2px inset #48CDD2
 }
 .cities img{
   width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 20px;
+}
+section{
+  padding: 50px;
+}
+.postCard{
+  border: 10px ridge #48CDD2;
+  padding: 20px 300px;
+  margin: 20px;
 }
