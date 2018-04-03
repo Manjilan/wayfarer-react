@@ -10,9 +10,9 @@ class Signup extends Component {
       password:"",
       confirm:""
     }
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSignupSubmit = this.onSignupSubmit.bind(this);
   }
-  onSubmit(event){
+  onSignupSubmit(event){
     event.preventDefault();
     let formdata = {name: this.state.name, password: this.state.password, confirm: this.state.confirm };
     console.log(formdata);
@@ -21,7 +21,7 @@ class Signup extends Component {
 registerUser(formdata){
   console.log("axios works")
     axios
-   .post("http://localhost:3001/register", formdata)
+   .post("https://shrouded-wildwood-58299.herokuapp.com/register", formdata)
    .then((response) => {
      console.log(response);
    })
@@ -31,15 +31,15 @@ registerUser(formdata){
   render() {
     return (
       <div className="UserForm">
-      <div className="modalForm">
-      <form className="Signup" onClick={this.onSubmit}>
-      <h2>Signup</h2>
-      <input type="text" placeholder="username" name="name" onChange={event => this.setState({name: event.target.name})}/><br/>
-      <input type="password" placeholder="password" name="password" onChange={event => this.setState({password: event.target.password})}/><br/>
-      <input type="password" placeholder="confirm password" name="confirm" onChange={event => this.setState({confirm: event.target.confirm})}/><br/>
-      <input type="submit" placeholder="signup"/>
-      </form>
-      </div>
+        <div className="modalForm">
+          <form className="Signup" onSubmit={this.onSignupSubmit}>
+            <h2>Signup</h2>
+            <input type="text" placeholder="Username" name="name" onChange={event => this.setState({name: event.target.name})}/><br/>
+            <input type="password" placeholder="Password" name="password" onChange={event => this.setState({password: event.target.password})}/><br/>
+            <input type="password" placeholder="Confirm Password" name="confirm" onChange={event => this.setState({confirm: event.target.confirm})}/><br/>
+            <input type="submit" placeholder="signup"/>
+          </form>
+        </div>
       </div>
     );
   }

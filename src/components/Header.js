@@ -19,6 +19,7 @@ class Header extends Component {
           <a onClick={this.modalShow} href="">Sign Up</a>
           <a onClick={this.modalShow} href="">Log In</a>
           <a href="#">Log Out</a>
+          <a href="/cities">Cities</a>
         </div>
       </nav>
       <h1>Wayfarer</h1>

@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import './cities.css';
+import {
+    Route,
+    Link,
+    Switch
+} from 'react-router-dom'
 import axios from 'axios'
 import City from './City'
 
+
 class Cities extends Component {
-  constructor(){
-  super();
+  constructor(props){
+  super(props);
   this.state={
     cities:[]
   }
 }
 componentDidMount () {
  axios
-   .get("http://localhost:3001/all")
+   .get("https://shrouded-wildwood-58299.herokuapp.com/all")
    .then((response) => {
      console.log(response.data.cities)
      this.setState({cities: response.data.cities})
@@ -21,9 +27,9 @@ componentDidMount () {
 }
 
   render() {
-    let cityList= this.state.cities.map(( city, index) => {
+    let cityList= this.state.cities.map((city, index) => {
       return(
-          <div key={index} className="cities">
+          <div key={city._id} className="cities" onClick={(e) => this.props.cityId(city._id)} >
             <h3>{city.name}</h3>
             <img src={city.image} alt="city"/>
           </div>
@@ -32,7 +38,6 @@ componentDidMount () {
     return (
       <div>
       {cityList}
-      <City cities={this.state.cities}/>
       </div>
     )
   }

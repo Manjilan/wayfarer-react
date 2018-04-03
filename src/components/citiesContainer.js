@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './cities.css';
 import Cities from './Cities';
 import City from './City';
 import CreatePost from './createPost'
 
 class CitiesContainer extends Component {
+constructor(props){
+  super(props);
+  this.state={
+    city:''
+  }
+  this.city=this.city.bind(this)
+}
+city(id){
+  this.setState({
+    city:id
+  })
+}
+
+
   postmodalShow = (e) => {
   let modal = document.querySelector('.postForm');
   modal.style.display = 'flex';
@@ -15,12 +29,12 @@ class CitiesContainer extends Component {
       <main className="mainPage">
         <aside className="aside">
           <h2>Cities</h2>
-          <Cities />
+          <Cities cityId={this.city}/>
         </aside>
         <section>
           <h2>City</h2>
-          <City />
-          <button onClick={this.postmodalShow} >+</button>
+          <button onClick={this.postmodalShow}>Create a Post</button>
+          <City city={this.state.city}/>
         </section>
         <CreatePost />
       </main>

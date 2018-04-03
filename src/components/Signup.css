@@ -17,3 +17,20 @@
   margin: 70px auto;
   background-color: white;
 }
+input, textarea, select{
+  margin: 10px;
+  width: 50%;
+  padding: 5px 50px;
+
+}
+h2{
+  text-transform: uppercase;
+  text-align: center;
+}
+form{
+  text-align: center;
+}
+.Signup{
+  width: 100%;
+  margin: 0 auto;
+}

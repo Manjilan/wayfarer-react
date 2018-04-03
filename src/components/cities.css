@@ -1,7 +1,15 @@
 .cities{
   width: 80%;
   background: white;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .cities img{
   width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 20px;
+}
+section{
+  padding: 50px;
 }
