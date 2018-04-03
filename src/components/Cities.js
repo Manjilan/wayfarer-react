@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+import {
+    Route,
+    Link,
+    Switch
+} from 'react-router-dom'
+import '../App.css';
+=======
 import './cities.css';
+>>>>>>> f71f833ee9e17c3feddf514cb4187a1c48e41970
 import axios from 'axios'
 import City from './City'
 
@@ -8,7 +17,9 @@ class Cities extends Component {
   super();
   this.state={
     cities:[]
+    // currentIndex: 0
   }
+    // this.cityClick = this.cityClick.bind(this)
 }
 componentDidMount () {
  axios
@@ -20,6 +31,9 @@ componentDidMount () {
    .catch(err => console.log(err))
 }
 
+// cityClick () {
+// 
+// }
   render() {
     let cityList= this.state.cities.map(( city, index) => {
       return(
