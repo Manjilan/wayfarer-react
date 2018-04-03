@@ -1,8 +1,9 @@
 .mainPage{
-  background: grey;
+  background: #48CDD2;
   display: flex;
 }
 .aside{
-  background: lightblue;
+  background: #192C47;
   width: 30%;
+  color: #48CDD2;
 }
