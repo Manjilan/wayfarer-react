@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import {
     Route,
     Link,
     Switch
 } from 'react-router-dom'
 import '../App.css';
+=======
+import './cities.css';
+>>>>>>> f71f833ee9e17c3feddf514cb4187a1c48e41970
 import axios from 'axios'
 import City from './City'
 
@@ -33,10 +37,10 @@ componentDidMount () {
   render() {
     let cityList= this.state.cities.map(( city, index) => {
       return(
-        <div key={index}>
-        <h3>{city.name}</h3>
-        <img src={city.image}/>
-        </div>
+          <div key={index} className="cities">
+            <h3>{city.name}</h3>
+            <img src={city.image} alt="city"/>
+          </div>
       )}
     )
     return (

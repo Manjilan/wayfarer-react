@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './Header.css';
 
 class Header extends Component {
     
@@ -15,11 +15,11 @@ class Header extends Component {
     }
 
   render() {
-    
+
     return (
       <header>
       <nav>
-        <a href="/"><img src="./img/logo.png" className="brand-logo"/></a>
+        <a href="/"><img src="./img/logo.png" alt ="logo" className="brand-logo"/></a>
         <div>
           <a onClick={this.modalShowSign} href="">Sign Up</a>
           <a onClick={this.modalShowLog} href="">Log In</a>
