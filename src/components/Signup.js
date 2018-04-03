@@ -32,11 +32,7 @@ registerUser(formdata){
     return (
       <div className="UserForm">
       <div className="modalForm">
-<<<<<<< HEAD
-      <form className="Signup">
-=======
       <form className="Signup" onClick={this.onSubmit}>
->>>>>>> f71f833ee9e17c3feddf514cb4187a1c48e41970
       <h2>Signup</h2>
       <input type="text" placeholder="username" name="name" onChange={event => this.setState({name: event.target.name})}/><br/>
       <input type="password" placeholder="password" name="password" onChange={event => this.setState({password: event.target.password})}/><br/>
